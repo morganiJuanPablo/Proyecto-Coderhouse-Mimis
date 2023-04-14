@@ -14,15 +14,17 @@ html{
 .headerIndex{
     width: 100%;
     height: 27rem;
-    position: relative;
     display: flex;
-    flex-flow: row wrap;    
-    justify-items: center;
+    flex-flow: row nowrap;
     align-items: center;
-}
-.eslogan{
+    align-content: center;
+    justify-content: space-between;
+  }
+  .headerIndex div {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
 }
 .logoIndex{
     padding: 0 3rem 0 8rem;
@@ -38,8 +40,7 @@ h1{
     flex-direction: row;
     gap: 2.5rem;
     list-style: none;
-    position: absolute;
-    right: 4rem;
+    margin-right: 4rem;
 }
 .ubicacionHeaderIndex{
     padding-top: 0.5rem;
@@ -248,12 +249,14 @@ footer{
     display: flex;
     flex-flow: row wrap;
     gap: 1.5rem;
+    padding-left: 0;
+    text-decoration: none;
 }
 .navFooter a{
     text-decoration: none;
     color: white;
     font-family: Poppins regular;
-    font-size: 1.5rem;
+    font-size: 1.5rem;    
 }
 .navLogosDirecc div p{
     color: white;
@@ -274,65 +277,62 @@ footer{
 /***********************TO SIT***********************************/
 
 /**********************HEADER :D GENERICO*********************************/
-    .bodyToSit{
+.bodyToSit{
     width: 100%;
     height: auto;
 }
-.headerGenerico{    
+.headerGenerico{
     width: 100%;
-    height: 30rem;
+    height: 27rem;
     display: flex;
-    flex-flow: row wrap;
-    justify-items: center;
-    align-items: center;
-}
-.menuHamburguesa{
-    display: none;
-}
-.logoEslogan{
-    display: flex;
-    width: auto;
     flex-flow: row nowrap;
     align-items: center;
+    align-content: center;
+    justify-content: space-between;
 }
 .logoEslogan{
-    padding-left: 8rem;
-    padding-bottom: 4rem;
-}
-.eslogan h1{
     display: flex;
-    padding-left: 2rem;
-    padding-top: 3rem;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5rem;
+    padding-bottom: 0rem;
+}
+.logoMimis img{
+    min-width: 12rem;
+    max-width: 17.2rem;
+    width: 100%;    
+}
+.logoToSit{
+    min-width: 15rem;
+    max-width: 25.7rem;
+    width: 100%; 
+}
+.eslogan{
+    font-family: Titan One;
+    color:rgba(51, 44, 40, 1);
     font-size: 3rem;
+    padding-left: 2rem;
+    
 }
-.navHeaderGenerico{
+nav{
+    padding-right: 6rem;
+    padding-top: 3rem;
+}
+.navHeader{
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     list-style: none;
-    gap: 1.5rem;
-    padding-right: 8rem;
+    gap: 1.5rem;   
 }
-.navPaginas{
-    display: flex;
-    flex-flow: row wrap; 
-    list-style: none; 
-    gap: 1.5rem;
-    padding-top: 0.5rem;      
-}
-.navPaginas a{
+.navHeader a{
     font-size: 1.8rem;
     font-family: Poppins semibold;
     text-decoration: none;
     color:rgba(51, 44, 40, 1);
 }
-.navPaginas a:hover{
+.navHeader a:hover{
     color: rgba(165, 215, 213, 1)
-}
-.navBanderitas{
-    display: flex;
-    flex-flow: row wrap;
-    list-style: none;
-    gap: 1.5rem;
 }
 .lineaEncabezado{    
     display: flex;
@@ -389,34 +389,25 @@ footer{
     align-items: center;
     padding-top: 8rem;
 }
+.menuHamburguesa{
+    display:none;}
 
     /************* media querieeee TO SIT***************************/
 
     /****************1400px*******************************/
 
     @media(max-width:1400px){
-        .navHeaderGenerico{
+        .navHeader{
             display: none;
-        }
-        .headerGenerico{ 
-            display: flex;
-            flex-flow: row wrap; 
-            width: auto;
-            height: auto;           
         }
         .menuHamburguesa{
             display:flex;
             padding-right: 8rem;
             padding-top: 4rem;
-        }
+        } 
         .lineaEncabezado{    
             top: 0rem;
         }
-        .logoEslogan{
-            padding-left: 3rem;
-            padding-bottom: 0rem;
-        }
-        
         .mainToSit{
             width: 100%;
             display: flex;
@@ -452,38 +443,16 @@ footer{
             width: auto;    
             display: flex;
             flex-flow: row wrap;
-            margin-top: 4rem;       
-        }
-    
+            margin-top: 0rem;
+            margin-bottom:4rem;}       
+ 
     }
 
       /****************1200px*******************************/
 
 
         @media(max-width:1200px){
-            .navHeaderGenerico{
-            display: none;
-        }
-        .headerGenerico{ 
-            display: flex;            
-            width: 100%;
-            padding-top: 2rem;
-        }
-        .logoEslogan{
-            padding-left: 0;
-            padding-bottom: 0;
-            padding-top: 2rem;
-            width: 100%;
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
-        }
-        .menuHamburguesa{
-            display:flex;
-            width: 100%;
-            justify-content: center;
-            padding: 0 0 3rem 0;
-        }
+
         .lineaEncabezado{    
             display: flex;
             flex-flow: column wrap;
@@ -496,10 +465,6 @@ footer{
             width: 85%;
             align-self: center;
         }   
-        .eslogan h1{
-            font-size: 3rem;
-            padding-top: 0;
-        }           
             footer{
             width: 100%;
             height: 35rem;
@@ -517,7 +482,10 @@ footer{
             flex-flow: column wrap;
             justify-content: center;
             align-items: center;
-            padding-left: 0px;              
+            padding-left: 0px;
+        }
+            .paginasFooter{
+            padding-right: 0px;
         }
             .navFooter{
             list-style: none;
@@ -546,87 +514,67 @@ footer{
             padding-bottom: 0;
             padding-right: 0;
         }
+        .qrToSit{
+            margin-bottom:4rem;       
+        }
     }
 
 /****************768px*******************************/
 
         @media(max-width:768px){
-            .headerGenerico{ 
-                display: flex;
-                flex-direction: column;            
-                width: 100%;
-                height: auto;
-                padding-top: 2rem;
-            }
-                .menuHamburguesa{
-                display:flex;
-                width: 100%;
-                justify-content: center;
-                padding: 3rem 0 5rem 0;
-            }
-            .lineaEncabezado{    
-                display: flex;
-                flex-flow: column wrap;
-                padding-top: 12rem;
-            }
-            .lineaEncabezado hr{
-                border-style: none;
-                background-color: rgba(51, 44, 40, 1);
-                height: 1px;
-                width: 85%;
-                align-self: center;
-            }   
-                .eslogan h1{
-                font-size: 3.8rem;
-                padding-top: 2rem;
-                text-align: center;
-            }
+ 
             .contenedorInfoToSit{
                 width: 100%;
                 display: flex;
                 justify-content: center;
             }
             .galeriaImgToSit{
-            width: 100%;
-            display:flex;
-            flex-flow: row nowrap;                  
-            gap: 1.5rem; 
-            padding: 8rem 0 8rem 0; 
-            justify-content: center;          
+                max-width: 100%;
+                display:flex;
+                flex-flow: row nowrap;                  
+                gap: 1.5rem; 
+                padding: 8rem 0 8rem 0; 
+                justify-content: center;          
         }
             .galeriaResponsive{
-            width: 100%;
-            height:auto;
-            display:flex;            
-        }
-            .toSitResponsive{
-                width: auto;
-                height: auto;
+                width: 100%;
+                height:auto;
                 display:flex;            
-            } 
+        }
             .infoToSit{
-            display: flex;
-            flex-flow: column wrap;
-            max-width: 100%;
-            width: 40rem;
-            padding-top: 0; 
-            align-content: center;
+                display: flex;
+                flex-flow: column wrap;
+                max-width: 100%;
+                width: 50rem;
+                padding-top: 0; 
+                align-content: center;
         }   
             .infoToSit div p{
-            max-width: 100%;
-            width: 30rem;  
+                width: 100%;
+                max-width: 50rem;                 
         }
-
-            .infoToSit div p{
-            width: auto;
+        .logoToSit{
+            min-width: 15rem;
+            max-width: 20rem;
+            width: 100%; 
         }
+        .qrToSit{
+            margin-bottom:4rem;       
+        }
+    }
+       /****************576px*******************************/
 
+       @media(max-width:576px){
+        .eslogan{
+            display:none;
+        }
+        .redesSociales{
+            margin-bottom: 2rem;
+        }
     }
 
 
-
-
-/***********************TO GO***********************************/
+    /***********************TO GO***********************************/
 
 /**********************MAIN :D*********************************/
 
@@ -678,24 +626,29 @@ footer{
 
 .fondoDeColorFormulario{
     background-color:rgba(165, 215, 213, 1);
+    height: 40rem;
+    padding-top: 10rem;
+    
 }
-.formulario div h2{
+div h2{
     font-family: Titan One;
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     color: rgba(51, 44, 40, 1);
 }
 .textoFormulario{
     width: 296px;
     font-family: Poppins regular;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+    margin-right: 4rem;
 }
 .datosAllenar{
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
     font-family: Poppins regular;
-    font-size: 1.2rem;
-    gap: 0.8rem;
+    font-size: 1.8rem;
+    margin-right: 4rem;
+    
 }
 .datosAllenar input{
     width: 290px;
@@ -703,16 +656,16 @@ footer{
     box-decoration-break: clone;
     border-bottom:1px solid rgba(51, 44, 40, 1);
     outline: 0;
-    background-color: white;
+    background-color: rgba(165, 215, 213, 1);
     font-family: Poppins regular;
-    font-size: 1rem;
+    font-size: 2rem;
     }
 .submitNovedades button{
     margin-top: 2rem;
     font-family: Titan One;
-    font-size: 1.1rem;
+    font-size: 1.9rem;
     width: 235px;
-    height: 3rem;
+    height: 4rem;
     border-style: none;
     background-color: rgba(51, 44, 40, 1);
     border-radius: 4rem;
@@ -723,83 +676,74 @@ footer{
     font-family: Titan One;
     font-size: 4rem;
     line-height: 4rem;
-    padding-left: 3rem;
+    padding-left: 2rem;
     padding-top: 8rem;
 }
-.detalleNovedades1{
+.detalleNovedades{
     max-width: 100%;
     width: 35rem;   
     font-family: Poppins regular;
     font-size: 1.8rem;
-    padding-top: 3rem; 
-    padding-left: 3rem;
+    padding: 3rem 3rem 2rem 2rem;   
 }
-.imagenNovedades1{
+.imagenNovedades{
     padding-top: 3rem;
     width: 100%;
-    max-width: 134rem; 
+    max-width: 134rem;     
 }
 .batidos{
     font-family: Titan One;
     font-size: 4rem;
     line-height: 4rem;
     padding-top: 8rem;
-    padding-right: 3rem;
-    text-align: right;
-}
-.detalleNovedades2{        
-    max-width: 100%;
-    width: 35rem;   
-    font-family: Poppins regular;
-    font-size: 1.8rem;
-    padding-top: 3rem;
-    text-align: right;
-    margin-block-end:0;
-}    
-.imagenNovedades2{
-    width: 100%;
-    max-width: 134rem; 
+    padding-left: 2rem;    
 }
 .croissant{
     font-family: Titan One;
     font-size: 4rem;
     line-height: 4rem;
-    padding-left: 3rem;
+    padding-left: 2rem;
     padding-top: 8rem;
-}
-.detalleNovedades3{
-    max-width: 100%;
-    width: 35rem;   
-    font-family: Poppins regular;
-    font-size: 1.8rem;
-    padding-top: 3rem; 
-    padding-left: 3rem;
-}
-.imagenNovedades3{
-    width: 100%;
-    max-width: 134rem; 
 }
 .lotus{
     font-family: Titan One;
     font-size: 4rem;
     line-height: 4rem;
-    padding-top: 8rem;
-    padding-right: 3rem;
-    text-align: right;
+    padding-left: 2rem;
+    padding-top: 8rem;    
     }
-.detalleNovedades4{        
-    max-width: 100%;
-    width: 35rem;   
-    font-family: Poppins regular;
-    font-size: 1.8rem;
-    padding-top: 3rem;
-    text-align: right; 
-}
-.imagenNovedades4{
-    width: 100%;
-    max-width: 134rem; 
-}
 
+    @media(max-width:1200px){
+
+        .wafleMeUp{
+            padding-top: 3rem;
+        }
+        .batidos{
+            padding-top: 3rem;
+        }
+        .lotus{
+            padding-top: 3rem;
+        }
+        .croissant{
+            padding-top: 3rem;
+        }
+        .fondoDeColorFormulario{
+            padding-top: 4rem;
+            height: 50rem;
+        }
+        .textoFormulario{
+            margin-right: 0rem;
+        }
+        .datosAllenar{
+            margin-right: 0rem;
+            
+        }
+        .redesSociales{
+            margin-bottom: 2rem;
+        }
+    }
+    
+    
 
  /************************************ UBICACION ;D ********************************************************/
 
@@ -819,7 +763,7 @@ footer{
         width: 100%;
         height: 27rem;
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         justify-content: space-between;
         justify-items: center;
         align-items: center;        
